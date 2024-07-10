@@ -1,0 +1,1 @@
+export const soundKitchen = new Audio('../../assets/assets_kitchen-timer.mp3');

@@ -1,6 +1,7 @@
 import state from './state.js';
 import * as el from './elements.js';
 import { reset } from './actions.js';
+import { soundKitchen } from './soundKitchen.js';
 
 let minutes;
 let seconds;
@@ -25,6 +26,7 @@ export function countdown() {
 
     if (minutes < 0) {
         reset();
+        soundKitchen.play();
         return; 
     }
 

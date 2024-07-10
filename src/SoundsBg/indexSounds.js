@@ -3,5 +3,4 @@ import * as events from "./eventsSounds.js";
 
 export function start() {
     events.registerControls();
-    console.log('start');
 }
