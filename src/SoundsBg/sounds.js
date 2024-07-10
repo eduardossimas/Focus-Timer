@@ -1,4 +1,4 @@
-export const musicForest = new Audio('../assets/Floresta.wav');
+export const musicForest = new Audio('https://raw.githubusercontent.com/myName/myRepo/master/assets/Floresta.wav');
 
 export const musicRain = new Audio('../assets/Chuva.wav');
 
