@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #fff;
+    --primary: #323238;
+    --secondary: #02799D;
+    --bg-card: hsla(240, 9%, 89%, 1);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+#app {
+    background-color: var(--background);
+    color: var(--primary);
+
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19rem;
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.timer #timer span {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10rem;
+    font-weight: 500;
+}
+
+.timer .controler {
+    display: flex;
+    gap: 2.2rem;
+}
+
+.timer .controler button {
+    background-color: transparent;
+    border: 0;
+
+    font-size: 4.8rem;
+
+    cursor: pointer;
+}
+
+.sounds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.sounds button {
+    background-color: var(--bg-card);
+    border: 0;
+    border-radius: 16px;
+    
+    padding: 3rem;
+
+    font-size: 4rem;
+
+    cursor: pointer;
+}
+
+.sounds button:active {
+    transform: scale(0.95);
+}
+
+.sounds .secondary {
+    background-color: var(--secondary);
+    color: #fff;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+html:not(.running) .ph-pause-circle, .running .ph-play-circle {
+    display: none;
+}

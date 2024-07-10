@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+            <div class="timer">
+                <section id="timer" class="flex">
+                    <span id="minutes">00</span>
+                    <span>:</span>
+                    <span id="seconds">00</span>
+                </section>
+                <div class="controler" id="controls">
+                    <button
+                    data-action="toggleRunning"
+                    class="ph ph-play-circle"><span class="sr-only">Iniciar</span></button>
+                    <button
+                    data-action="toggleRunning"
+                    class="ph ph-pause-circle"><span class="sr-only">Pausar</span></button>
+                    <button
+                    data-action="reset"
+                    class="ph ph-stop-circle"><span class="sr-only">Reiniciar</span></button>
+                    <button
+                    data-action="moreFive"
+                    class="ph ph-plus-circle"><span class="sr-only">Mais Cinco</span></button>
+                    <button
+                    data-action="lessFive"
+                    class="ph ph-minus-circle"><span class="sr-only">Menos Cinco</span></button>
+                </div>
+            </div>
+            <div class="sounds" id="controlsSounds">
+                <button
+                data-action="toggleMusicForest"
+                id="musicForest"
+                class="ph ph-tree"><span class="sr-only">Floresta</span></button>
+                <button
+                data-action="toggleMusicRain"
+                id="musicRain"
+                class="ph ph-cloud-rain"><span class="sr-only">Chuva</span></button>
+                <button
+                data-action="toggleMusicCoffee"
+                id="musicCoffee"
+                class="ph ph-coffee"><span class="sr-only">Cafeteria</span></button>
+                <button
+                data-action="toggleMusicFire"
+                id="musicFire"
+                class="ph ph-fire"><span class="sr-only">Lareira</span></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
